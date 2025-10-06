@@ -1,0 +1,58 @@
+:root {
+  --danger-color: #ff4d4d;
+  --success-color: #4bb543;
+}
+
+.message {
+  background-color: var(--danger-color);
+  width: 800px;
+  height: 50px;
+  justify-self: center;
+  margin-block: 10px;
+  border-radius: 7px;
+  border: 1px solid var(--main-color);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+@media (max-width: 850px) {
+  .message {
+    width: 90%;
+    font-size: 14px;
+  }
+}
+
+.auth-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  justify-self: center;
+  height: 600px;
+  margin-top: 90px;
+}
+
+.auth-container .auth-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.auth-container .auth-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background: transparent;
+  color: var(--main-color);
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+}

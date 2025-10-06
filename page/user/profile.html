@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Salam Books - User Profile</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="nav">
+        <!-- <img src="public/logo.png" alt="Logo"> -->
+        <h1 class="logo"><a href="/">Salam Books</a></h1>
+        <div class="links">
+          <a href="#">Home</a>
+          <a href="../../page/contact.html">Contact Us</a>
+          <a href="../../page/about.html">About our bookshop</a>
+          <a href="../../page/download.html">Download the app</a>
+        </div>
+        <div class="spinner" id="user-spinner"></div>
+        <div id="auth-btns" class="action-btns" style="display: none">
+          <a href="../../page/auth/sign-in.html"
+            ><button class="btn">
+              Sign In <i class="fa-solid fa-right-to-bracket"></i></button
+          ></a>
+          <a href="../../page/auth/sign-up.html"
+            ><button class="btn">
+              Sign Up for Free <i class="fa-solid fa-user-plus"></i></button
+          ></a>
+        </div>
+        <a href="../../page/user/profile.html"
+          ><i id="user-btn" class="fa-solid fa-user" style="display: none"></i
+        ></a>
+      </div>
+      <div class="profile-container">
+        <h2>User Profile</h2>
+        <div class="profile-card">
+          <div class="profile-info">
+            <p><strong>Email:</strong> <span id="profile-email"></span></p>
+            <p>
+              <strong>ID:</strong>
+              <span id="profile-id"></span>
+            </p>
+            <p>
+              <strong>Username:</strong> <span id="profile-username"></span>
+            </p>
+            <p>
+              <strong>Member Since:</strong>
+              <span id="profile-member-since"></span>
+            </p>
+          </div>
+          <button id="logout-btn" class="btn logout-btn" onclick="signOut()">
+            Log Out
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script>
+      const supabase = window.supabase.createClient(
+        "https://vlfcuzyouvtpcmzhsglv.supabase.co",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZsZmN1enlvdXZ0cGNtemhzZ2x2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk2ODY4NjksImV4cCI6MjA3NTI2Mjg2OX0.K2JTqeYVzh1ZMIn4QZ-YmsnoWoSNUuluNqLefNK658k"
+      );
+    </script>
+    <script src="../../js/app.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

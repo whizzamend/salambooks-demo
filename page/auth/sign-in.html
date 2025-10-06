@@ -3,7 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Salam Books - Sign In</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../../fontawesome/css/all.min.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="nav">
+      <!-- <img src="public/logo.png" alt="Logo"> -->
+      <h1 class="logo"><a href="/">Salam Books</a></h1>
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="../../page/contact.html">Contact Us</a>
+        <a href="../../page/about.html">About our bookshop</a>
+        <a href="../../page/download.html">Download the app</a>
+      </div>
+      <div class="spinner" id="user-spinner"></div>
+      <div id="auth-btns" class="action-btns" style="display: none">
+        <a href="../../page/auth/sign-in.html"
+          ><button class="btn">
+            Sign In <i class="fa-solid fa-right-to-bracket"></i></button
+        ></a>
+        <a href="../../page/auth/sign-up.html"
+          ><button class="btn">
+            Sign Up for Free <i class="fa-solid fa-user-plus"></i></button
+        ></a>
+      </div>
+      <a href="../../page/user/profile.html"
+        ><i id="user-btn" class="fa-solid fa-user" style="display: none"></i
+      ></a>
+    </div>
+    <div class="message" id="message" style="display: none"></div>
+    <div class="auth-container">
+      <h1>Sign In</h1>
+      <div class="auth-form" id="signin-form">
+        <p>Email:</p>
+        <input type="text" id="signin-email" name="email" required />
+        <br />
+        <p>Password:</p>
+        <input type="password" id="signin-password" name="password" required />
+        <br />
+        <button class="btn" onclick="signIn()">Sign In</button>
+        <a href="./sign-up.html"><button class="btn">Sign Up</button></a>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script>
+      const supabase = window.supabase.createClient(
+        "https://vlfcuzyouvtpcmzhsglv.supabase.co",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZsZmN1enlvdXZ0cGNtemhzZ2x2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk2ODY4NjksImV4cCI6MjA3NTI2Mjg2OX0.K2JTqeYVzh1ZMIn4QZ-YmsnoWoSNUuluNqLefNK658k"
+      );
+    </script>
+    <script src="js/auth.js"></script>
+  </body>
 </html>
